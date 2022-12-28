@@ -1,0 +1,21 @@
+name: Lint demo
+
+on:
+ push
+ 
+jobs:
+ lint:
+    name: linting
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out
+        uses: actions/checkout@v2
+
+      - name: linting the code
+      
+        run: |
+          sudo npm install -g eslint
+          npm install eslint-plugin-react@latest --save-dev
+          npm run lint . &
+          pwd
