@@ -15,7 +15,7 @@ jobs:
       - name: linting the code
       
         run: |
-          sudo npm install -g eslint
+          npm install -g eslint
           npm install eslint-plugin-react@latest --save-dev
           npm run lint . &
           pwd
